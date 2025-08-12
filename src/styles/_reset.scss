@@ -1,0 +1,90 @@
+// 1) box-sizing
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  // 2) usuń domyślne marginesy i paddingi
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    background: transparent;
+  }
+  
+  // 3) podstawowe ustawienia dla body
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    line-height: 1.4;         // przyjemniejszy domyślny interliniaż
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: inherit;
+    background: #fff;
+  }
+  
+  // 4) usuń list-style dla list
+  ol, ul {
+    list-style: none;
+  }
+  
+  // 5) obrazy i media responsywne
+  img, picture, video, canvas, svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  // 6) linki
+  a {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+  }
+  
+  // 7) formularze, przyciski i inputy — odziedzicz czcionkę
+  button, input, textarea, select {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+  }
+  
+  // 8) przyciski — wykonalne fokusowanie
+  button {
+    cursor: pointer;
+  }
+  
+  // 9) tabele — domyślne ustawienia
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  // 10) pomocnicze: usuń outline ale zostaw widoczny focus (dobre dla dostępności)
+  :focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  :focus-visible {
+    outline: 3px solid rgba(0,0,0,0.15);
+    outline-offset: 2px;
+  }
